@@ -23,15 +23,11 @@ $(".saveBtn").on("click", function () {
   localStorage.setItem(dayHour, dayDesc);
 });
 
-// var momentTime = moment().format("LT");
-// var currentTime = document.getElementById("9hour").innerText;
-
-$(".hour").each(function () {
-  var momentTime = moment().format("LT");
-  var currentTime = parseInt($(".hour").text());
+$(".description").each(function () {
+  var momentTime = moment().hour();
+  var currentTime = parseInt($(this).attr("data-time"));
   console.log(momentTime);
   console.log(currentTime);
-  console.log(typeof currentTime);
   if (currentTime < momentTime) {
     $(this).addClass("past");
   } else if (currentTime > momentTime) {

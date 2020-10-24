@@ -23,6 +23,9 @@ textarea {
 
 .description {
   white-space: pre-wrap;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #000000;
 }
 
 .time-block {
